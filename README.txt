@@ -1,4 +1,4 @@
-Paquete: DavidReina_PruebasAutomatizadasN2.zip
+Paquete: JhonMontoya_PruebasAutomatizadas.zip
 
 Contenido:
 - selenium_ide_project.side  -> Selenium IDE project with modules A and B
@@ -14,3 +14,4 @@ Run Playwright:
 2) npm install
 3) npx playwright install
 4) npx playwright test --headed
+

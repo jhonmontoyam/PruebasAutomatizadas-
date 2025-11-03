@@ -1,0 +1,134 @@
+{
+  "id": "jpetstore-assessment-side",
+  "version": "3.17.0",
+  "name": "JPetStore Assessment - Selenium IDE",
+  "url": "https://jpetstore.aspectran.com/",
+  "tests": [
+    {
+      "id": "A-compra-completa",
+      "name": "Compra Completa - Módulo A",
+      "commands": [
+        {
+          "command": "open",
+          "target": "/actions/Catalog.action",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "css=a[href*='signonForm']",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "css=input[name='username']",
+          "value": "j2ee"
+        },
+        {
+          "command": "type",
+          "target": "css=input[name='password']",
+          "value": "j2ee"
+        },
+        {
+          "command": "click",
+          "target": "css=input[name='signon']",
+          "value": ""
+        },
+        {
+          "command": "open",
+          "target": "/actions/Catalog.action?viewCategory=&categoryId=FISH",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "css=a[href*='addToCart'], css=a:contains('Add to Cart')",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "css=a[href*='newOrderForm'], css=input[name='newOrder']",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "css=input[name='confirmOrder'], css=button:contains('Confirm')",
+          "value": ""
+        },
+        {
+          "command": "assertText",
+          "target": "css=body",
+          "value": "Thank you"
+        }
+      ]
+    },
+    {
+      "id": "B-gestion-cuenta",
+      "name": "Gestión de Cuenta - Módulo B",
+      "commands": [
+        {
+          "command": "open",
+          "target": "/actions/Catalog.action",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "css=a[href*='signonForm']",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "css=input[name='username']",
+          "value": "j2ee"
+        },
+        {
+          "command": "type",
+          "target": "css=input[name='password']",
+          "value": "j2ee"
+        },
+        {
+          "command": "click",
+          "target": "css=input[name='signon']",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "css=a[href*='editAccountForm']",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "css=input[name='account.firstName']",
+          "value": "Juan"
+        },
+        {
+          "command": "type",
+          "target": "css=input[name='account.lastName']",
+          "value": "Pérez"
+        },
+        {
+          "command": "click",
+          "target": "css=input[name='editAccount']",
+          "value": ""
+        },
+        {
+          "command": "assertText",
+          "target": "css=body",
+          "value": "Account information updated successfully"
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "suite1",
+      "name": "Suite A y B",
+      "tests": [
+        "A-compra-completa",
+        "B-gestion-cuenta"
+      ]
+    }
+  ],
+  "urls": [
+    "https://jpetstore.aspectran.com/"
+  ],
+  "plugins": []
+}

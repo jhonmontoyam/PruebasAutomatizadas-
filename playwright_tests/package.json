@@ -1,0 +1,12 @@
+{
+  "name": "jpetstore_assessment",
+  "version": "1.0.0",
+  "description": "Pruebas automatizadas de JPetStore con Playwright",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.2"
+  }
+}
